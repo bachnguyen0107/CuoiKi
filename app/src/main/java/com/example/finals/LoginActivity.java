@@ -21,6 +21,8 @@ import java.util.Base64;
 
 public class LoginActivity extends AppCompatActivity {
 
+    public static final String EXTRA_EMAIL = "EXTRA_EMAIL";
+
     private EditText edtEmail, edtPassword;
 
     @Override
@@ -73,7 +75,7 @@ public class LoginActivity extends AppCompatActivity {
             }
             String hash = hashPassword(password, user.salt);
             if (hash.equals(user.passwordHash)) {
-                runOnUiThread(() -> navigateToMain());
+                runOnUiThread(() -> navigateToMain(email));
             } else {
                 runOnUiThread(() -> Toast.makeText(this, "Wrong password", Toast.LENGTH_SHORT).show());
             }
@@ -102,8 +104,9 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-    private void navigateToMain() {
+    private void navigateToMain(String email) {
         Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra(EXTRA_EMAIL, email);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
         finish();
