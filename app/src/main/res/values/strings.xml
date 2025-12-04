@@ -26,4 +26,14 @@
     <string name="delete_flashcard_message">This action cannot be undone.</string>
     <string name="error_question_required">Question is required</string>
     <string name="error_answer_required">Answer is required</string>
+
+    <!-- Quiz -->
+    <string name="skip">Skip</string>
+    <string name="submit">Submit</string>
+    <string name="time_left_default">Time left: --s</string>
+    <string name="time_left_s">Time left: %1$ds</string>
+    <string name="quiz_progress_default">Question --/--</string>
+    <string name="quiz_progress">Question %1$d/%2$d</string>
+    <string name="quiz_result_toast">You scored %1$d out of %2$d</string>
+    <string name="no_flashcards_for_quiz">No flashcards available. Create some first.</string>
 </resources>

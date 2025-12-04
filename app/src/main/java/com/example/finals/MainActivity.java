@@ -12,6 +12,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.finals.flashcards.FlashcardsActivity;
+import com.example.finals.quiz.QuizActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -49,6 +50,11 @@ public class MainActivity extends AppCompatActivity {
         Button btnFlashcards = findViewById(R.id.btnFlashcards);
         if (btnFlashcards != null) {
             btnFlashcards.setOnClickListener(v -> startActivity(new Intent(this, FlashcardsActivity.class)));
+        }
+
+        Button btnQuiz = findViewById(R.id.btnQuiz);
+        if (btnQuiz != null) {
+            btnQuiz.setOnClickListener(v -> startActivity(new Intent(this, QuizActivity.class)));
         }
     }
 }

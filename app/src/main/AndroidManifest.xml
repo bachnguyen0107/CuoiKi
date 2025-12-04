@@ -25,6 +25,7 @@
         </activity>
         <activity android:name=".flashcards.FlashcardsActivity" android:exported="false"/>
         <activity android:name=".flashcards.FlashcardFormActivity" android:exported="false"/>
+        <activity android:name=".quiz.QuizActivity" android:exported="false"/>
     </application>
 
 </manifest>
